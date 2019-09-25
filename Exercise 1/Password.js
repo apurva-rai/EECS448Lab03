@@ -7,7 +7,7 @@ var p2 = document.getElementById("p2").value;
   if(p1 == p2 && p1.length > 7)
   {
 
- alert("Validated! Passwords match and are at least 8 characters long.");
+    alert("Validated! Passwords match and are at least 8 characters long.");
 
   }
 
