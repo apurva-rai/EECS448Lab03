@@ -4,13 +4,49 @@
   </head>
 
   <body bgcolor="black">
-    <script src="slideshow.js"></script>
+
     <p align = "center"><br><br><br>
       <font size = 7 face="Times New Roman">
-        <img id="thisImg" src="Image1.jpeg" width="1000" height="800"></img><br>
+        <img src = "" id="please" width="1000" height="800" /><br>
       <button value="Authenticate" onClick="previous()">Previous  </button>
       <button value="Authenticate" onClick="next()">  Next</button>
     </p>
 
   </body>
+  <script type = "text/javascript">
+
+    var counter = 0;
+    var imageArray = [
+                        "Image1.jpeg",
+                        "Image2.jpeg",
+                        "Image3.jpg",
+                        "Image4.jpg",
+                        "Image5.jpg"
+                      ];
+
+    var imgTag = document.getElementById("please")
+    imgTag.src = imageArray[counter];
+
+    function next()
+    {
+
+      if(counter > 3) counter = 0;
+      else counter++;
+
+      imgTag.src = imageArray[counter];
+      console.log(counter);
+    }
+
+    function previous()
+    {
+
+      if(counter == 0) counter = 4;
+      else counter--;
+
+      imgTag.src = imageArray[counter];
+      console.log(counter);
+
+    }
+
+  </script>
 </html>
