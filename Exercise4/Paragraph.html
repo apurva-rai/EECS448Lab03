@@ -1,0 +1,89 @@
+<html>
+  <head>
+        <title>Dummy text modifier</title>
+    <script>
+      function color()
+      {
+
+        let red = document.getElementById("redText").value;
+        let blue = document.getElementById("blueText").value;
+        let green = document.getElementById("greenText").value;
+        let width = document.getElementById("width");
+        let redBackground = document.getElementById("redBackground").value;
+        let blueBackground = document.getElementById("blueBackground").value;
+        let greenBackground = document.getElementById("greenBackground").value;
+
+        if(red>255 || red<0 || blue>255 || blue<0 || green>255 || green<0) console.log("Invalid input. Incorrect color displayed.")
+        document.getElementById("dummy").style.color = "rgb("+red+","+green+","+blue+")";
+
+        if(redBackground>255 || redBackground<0 || blueBackground>255 || blueBackground<0 || greenBackground>255 || greenBackground<0) console.log("Invalid input. Incorrect background displayed.")
+        document.getElementById("dummy").style.backgroundColor = "rgb("+redBackground+","+greenBackground+","+blueBackground+")";
+
+        document.getElementById("dummy").style.width = width;
+
+      }
+    </script>
+    <style>
+      div
+      {
+
+        align:center;
+
+      }
+    </style>
+  </head>
+<body align="center"><br><br>
+  <p id="dummy">Exorcizamus te, omnis immundus spiritus
+omnis satanica potestas, omnis incursio
+infernalis adversarii, omnis legio,
+omnis congregatio et secta diabolica.
+Ergo draco maledicte
+et omnis legio diabolica
+adjuramus te.
+Cessa decipere humanas creaturas,
+eisque aeternae Perditionis venenum propinare.
+
+Vade, Satana, inventor et magister
+omnis fallaciae, hostis humanae salutis.
+Humiliare sub potenti manu dei,
+contremisce et effuge, invocato a
+nobis sancto et terribili nomine,
+quem inferi tremunt.
+
+Ab insidiis diaboli, libera nos, Domine.
+Ut Ecclesiam tuam secura tibi facias libertate servire
+te rogamus, audi nos.
+Ut inimicos sanctae Ecclesiae humiliare digneris,
+te rogamus, audi nos.
+
+Terribilis Deus de sanctuario suo.
+Deus Israhel ipse truderit virtutem
+et fortitudinem plebi Suae.
+Benedictus deus. Gloria patri.
+  </p>
+
+     <div>
+        <h2>Font color</h2>
+        Red(0-255):
+        <input type="text" id="redText" value="0">
+         Green(0-255):
+        <input type="text" id="greenText" value="0">
+         Blue(0-255):
+        <input type="text" id="blueText" value="0">
+    </div>
+
+    <div>
+      <h2>Background color</h2>
+      Red(0-255):
+      <input type="text" id="redBackground" value="255">
+       Green(0-255):
+      <input type="text" id="greenBackground" value="255">
+       Blue(0-255):
+      <input type="text" id="blueBackground" value="255">
+    </div><br>
+    <h2>Paragraph width</h2>
+    Width(px):
+    <input type="text" id="width" value="500"><br><br>
+    <button onClick="color()">Update</button>
+  </body>
+</html>
