@@ -8,13 +8,13 @@
         let red = document.getElementById("redText").value;
         let blue = document.getElementById("blueText").value;
         let green = document.getElementById("greenText").value;
-        let width = document.getElementById("width");
+        let width = document.getElementById("width").value;
         let redBackground = document.getElementById("redBackground").value;
         let blueBackground = document.getElementById("blueBackground").value;
         let greenBackground = document.getElementById("greenBackground").value;
 
         if(red>255 || red<0 || blue>255 || blue<0 || green>255 || green<0) console.log("Invalid input. Incorrect color displayed.")
-        document.getElementById("dummy").style.color = "rgb("+red+","+green+","+blue+")";
+        document.getElementById("dummy").style.borderColor = "rgb("+red+","+green+","+blue+")";
 
         if(redBackground>255 || redBackground<0 || blueBackground>255 || blueBackground<0 || greenBackground>255 || greenBackground<0) console.log("Invalid input. Incorrect background displayed.")
         document.getElementById("dummy").style.backgroundColor = "rgb("+redBackground+","+greenBackground+","+blueBackground+")";
@@ -24,10 +24,12 @@
       }
     </script>
     <style>
-      div
+      p
       {
 
-        align:center;
+        border-style:solid;
+        margin-left:auto;
+        margin-right:auto;
 
       }
     </style>
@@ -63,7 +65,7 @@ Benedictus deus. Gloria patri.
   </p>
 
      <div>
-        <h2>Font color</h2>
+        <h2>Border color</h2>
         Red(0-255):
         <input type="text" id="redText" value="0">
          Green(0-255):
